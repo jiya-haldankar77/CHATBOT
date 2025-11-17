@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BettrMe.AI - Better Communication, Deeper Connections</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="chatbot/static/butterfly.css">
+    <style>
+        .chatbot-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #4f46e5, #818cf8);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            font-size: 28px;
+            border: none;
+            outline: none;
+        }
+        
+        .chatbot-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .chatbot-button i {
+            transition: transform 0.3s ease;
+        }
+        
+        .chatbot-button:hover i {
+            transform: scale(1.1);
+        }
+        
+        @media (max-width: 768px) {
+            .chatbot-button {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">🦋</div>
+                <span class="logo-text">BettrMe.AI</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="product.html" class="nav-link">Practice Session</a></li>
+                <li><a href="#" class="nav-link">My Space</a></li>
+                <li><a href="#" class="nav-link">Use Cases</a></li>
+                <li><a href="#" class="nav-link sign-in-btn">Sign in</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="network-animation"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="highlight">Bettr</span> Communication<br>
+                Deeper Connections, Bigger Impacts
+            </h1>
+            <p class="hero-description">
+                BettrMe.AI helps you strengthen relationships and communication at work and in life.<br>
+                With AI-powered insights and real-world practice, you'll gain the confidence to connect deeply,<br>
+                grow personally and professionally to achieve your goals.
+            </p>
+            <div class="hero-logo">
+                <div class="butterfly-logo">🦋</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Character Profiles Section -->
+    <section class="profiles-section">
+        <h2 class="section-title">Meet Our Personalities</h2>
+        <p class="section-subtitle">Practice with diverse characters to enhance your communication skills</p>
+        
+        <div class="carousel">
+            <button class="carousel-btn prev" aria-label="Previous slide">❮</button>
+            
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide active">
+                        <div class="profile-card">
+                            <div class="profile-image">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Eric">
+                            </div>
+                            <div class="profile-content">
+                                <h3>Eric</h3>
+                                <p class="profile-subtitle">Good heart, low emotional maturity</p>
+                                <div class="profile-tags">
+                                    <span class="tag positive">Kind-hearted</span>
+                                    <span class="tag positive">Sensitive</span>
+                                    <span class="tag positive">Compassionate</span>
+                                    <span class="tag negative">Over-emotional</span>
+                                </div>
+                                <ul class="profile-points">
+                                    <li>Kind-hearted and sensitive, valued for compassion and goodwill.</li>
+                                    <li>Struggles with emotional maturity and handling conflicts constructively.</li>
+                                    <li>Becomes detached from practical realities when overwhelmed by feelings.</li>
+                                    <li>Needs help developing emotional resilience and practical coping strategies.</li>
+                                </ul>
+                            </div>
+                            <div class="profile-footer">
+                                <div class="footer-icon">💡</div>
+                                <p>Needs emotional intelligence and conflict-resolution skills to turn empathy into meaningful connection.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide">
+                        <div class="profile-card">
+                            <div class="profile-image">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="Marcus">
+                            </div>
+                            <div class="profile-content">
+                                <h3>Marcus</h3>
+                                <p class="profile-subtitle">Talented professional, struggles with trust</p>
+                                <div class="profile-tags">
+                                    <span class="tag positive">Talented</span>
+                                    <span class="tag positive">Helpful</span>
+                                    <span class="tag negative">Distrustful</span>
+                                    <span class="tag negative">Reserved</span>
+                                </div>
+                                <ul class="profile-points">
+                                    <li>Consistently delivers high-quality work but struggles with office politics.</li>
+                                    <li>Gets passed over for promotions despite strong technical skills.</li>
+                                    <li>Finds it hard to trust colleagues and build strategic relationships.</li>
+                                    <li>Needs to develop leadership presence and self-advocacy skills.</li>
+                                </ul>
+                            </div>
+                            <div class="profile-footer">
+                                <div class="footer-icon">💡</div>
+                                <p>Needs to build trust and learn to effectively communicate value for career advancement.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide">
+                        <div class="profile-card">
+                            <div class="profile-image">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop&crop=face" alt="Sarah">
+                            </div>
+                            <div class="profile-content">
+                                <h3>Sarah</h3>
+                                <p class="profile-subtitle">Ambitious but struggles with feedback</p>
+                                <div class="profile-tags">
+                                    <span class="tag positive">Ambitious</span>
+                                    <span class="tag positive">Driven</span>
+                                    <span class="tag negative">Defensive</span>
+                                    <span class="tag negative">Perfectionist</span>
+                                </div>
+                                <ul class="profile-points">
+                                    <li>High-achieving professional with a strong work ethic.</li>
+                                    <li>Struggles with receiving constructive criticism.</li>
+                                    <li>Tends to take feedback personally rather than professionally.</li>
+                                    <li>Needs to develop resilience and growth mindset.</li>
+                                </ul>
+                            </div>
+                            <div class="profile-footer">
+                                <div class="footer-icon">💡</div>
+                                <p>Needs to embrace feedback as a growth opportunity and build emotional resilience.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 4 -->
+                    <div class="carousel-slide">
+                        <div class="profile-card">
+                            <div class="profile-image">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&crop=face" alt="James">
+                            </div>
+                            <div class="profile-content">
+                                <h3>James</h3>
+                                <p class="profile-subtitle">Brilliant but socially awkward</p>
+                                <div class="profile-tags">
+                                    <span class="tag positive">Intelligent</span>
+                                    <span class="tag positive">Analytical</span>
+                                    <span class="tag negative">Awkward</span>
+                                    <span class="tag negative">Direct</span>
+                                </div>
+                                <ul class="profile-points">
+                                    <li>Exceptional problem-solver with sharp analytical skills.</li>
+                                    <li>Often misunderstood due to direct communication style.</li>
+                                    <li>Struggles with office small talk and social cues.</li>
+                                    <li>Needs to develop emotional intelligence and soft skills.</li>
+                                </ul>
+                            </div>
+                            <div class="profile-footer">
+                                <div class="footer-icon">💡</div>
+                                <p>Needs to balance technical brilliance with emotional intelligence for better team integration.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 5 -->
+                    <div class="carousel-slide">
+                        <div class="profile-card">
+                            <div class="profile-image">
+                                <img src="https://imgcdn.stablediffusionweb.com/2024/12/11/a8fddfcf-8484-4496-aa13-5916166cad56.jpg" alt="Lisa">
+                            </div>
+                            <div class="profile-content">
+                                <h3>Lisa</h3>
+                                <p class="profile-subtitle">Creative but disorganized</p>
+                                <div class="profile-tags">
+                                    <span class="tag positive">Creative</span>
+                                    <span class="tag positive">Innovative</span>
+                                    <span class="tag negative">Disorganized</span>
+                                    <span class="tag negative">Procrastinator</span>
+                                </div>
+                                <ul class="profile-points">
+                                    <li>Brilliant creative mind with innovative ideas.</li>
+                                    <li>Struggles with time management and organization.</li>
+                                    <li>Often misses deadlines despite great potential.</li>
+                                    <li>Needs to develop better work habits and discipline.</li>
+                                </ul>
+                            </div>
+                            <div class="profile-footer">
+                                <div class="footer-icon">💡</div>
+                                <p>Needs structure and time management skills to fully realize creative potential.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 6 -->
+                    <div class="carousel-slide">
+                        <div class="profile-card">
+                            <div class="profile-image">
+                                <img src="https://apob.ai/wp-content/smush-webp/2025/02/7eed96c5-9a22-4798-96f6-1077735ae4a2-2-min.jpg.webp" alt="Mike">
+                            </div>
+                            <div class="profile-content">
+                                <h3>Mike</h3>
+                                <p class="profile-subtitle">Team player but struggles with leadership</p>
+                                <div class="profile-tags">
+                                    <span class="tag positive">Team Player</span>
+                                    <span class="tag positive">Reliable</span>
+                                    <span class="tag negative">Indecisive</span>
+                                    <span class="tag negative">Conflict-Avoidant</span>
+                                </div>
+                                <ul class="profile-points">
+                                    <li>Great team member who gets along with everyone.</li>
+                                    <li>Struggles with making tough decisions.</li>
+                                    <li>Avoids conflict even when necessary.</li>
+                                    <li>Needs to develop confidence in leadership role.</li>
+                                </ul>
+                            </div>
+                            <div class="profile-footer">
+                                <div class="footer-icon">💡</div>
+                                <p>Needs to build confidence in decision-making and conflict resolution for leadership success.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 7 -->
+                    <div class="carousel-slide">
+                        <div class="profile-card">
+                            <div class="profile-image">
+                                <img src="https://static.vecteezy.com/system/resources/previews/039/334/802/non_2x/ai-generated-indian-female-student-free-photo.jpg" alt="Priya">
+                            </div>
+                            <div class="profile-content">
+                                <h3>Priya</h3>
+                                <p class="profile-subtitle">Detail-oriented but perfectionist</p>
+                                <div class="profile-tags">
+                                    <span class="tag positive">Detail-Oriented</span>
+                                    <span class="tag positive">Thorough</span>
+                                    <span class="tag negative">Perfectionist</span>
+                                    <span class="tag negative">Slow</span>
+                                </div>
+                                <ul class="profile-points">
+                                    <li>Incredible attention to detail and accuracy.</li>
+                                    <li>Spends too much time perfecting minor details.</li>
+                                    <li>Struggles with meeting deadlines due to perfectionism.</li>
+                                    <li>Needs to learn when 'good enough' is sufficient.</li>
+                                </ul>
+                            </div>
+                            <div class="profile-footer">
+                                <div class="footer-icon">💡</div>
+                                <p>Needs to balance perfectionism with efficiency to maximize productivity.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 8 -->
+                    <div class="carousel-slide">
+                        <div class="profile-card">
+                            <div class="profile-image">
+                                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&h=300&fit=crop&crop=face" alt="David">
+                            </div>
+                            <div class="profile-content">
+                                <h3>David</h3>
+                                <p class="profile-subtitle">Visionary but struggles with execution</p>
+                                <div class="profile-tags">
+                                    <span class="tag positive">Visionary</span>
+                                    <span class="tag positive">Big Thinker</span>
+                                    <span class="tag negative">Overwhelmed</span>
+                                    <span class="tag negative">Scattered</span>
+                                </div>
+                                <ul class="profile-points">
+                                    <li>Exceptional at seeing the big picture and future possibilities.</li>
+                                    <li>Struggles with breaking down visions into actionable steps.</li>
+                                    <li>Gets overwhelmed by too many ideas and projects at once.</li>
+                                    <li>Needs help with focus and project management.</li>
+                                </ul>
+                            </div>
+                            <div class="profile-footer">
+                                <div class="footer-icon">💡</div>
+                                <p>Needs to develop project management skills to turn visions into reality.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-btn next" aria-label="Next slide">❯</button>
+            
+            <div class="carousel-indicators">
+                <button class="indicator active" data-slide="0" aria-label="Go to slide 1"></button>
+                <button class="indicator" data-slide="1" aria-label="Go to slide 2"></button>
+                <button class="indicator" data-slide="2" aria-label="Go to slide 3"></button>
+                <button class="indicator" data-slide="3" aria-label="Go to slide 4"></button>
+                <button class="indicator" data-slide="4" aria-label="Go to slide 5"></button>
+                <button class="indicator" data-slide="5" aria-label="Go to slide 6"></button>
+                <button class="indicator" data-slide="6" aria-label="Go to slide 7"></button>
+                <button class="indicator" data-slide="7" aria-label="Go to slide 8"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Early Access Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Get Early Access</h2>
+            <button class="cta-button" onclick="window.location.href='product.html'">Explore Product Details</button>
+        </div>
+    </section>
+
+    <script src="carousel.js"></script>
+    
+    <!-- 3D Butterfly Chat Button -->
+    <a href="http://localhost:8000/" class="butterfly-container" id="chatbotButton" title="Chat with BettrBot">
+        <div class="butterfly">
+            <div class="wing left"></div>
+            <div class="wing right"></div>
+            <div class="body">
+                <div class="antenna left"></div>
+                <div class="antenna right"></div>
+            </div>
+        </div>
+        <span class="butterfly-text">Chat with us</span>
+    </a>
+</body>
+</html>
