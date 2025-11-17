@@ -1,3 +1,50 @@
+# BettrMe.AI - Intelligent Chatbot Assistant
+
+## 🌟 Overview
+BettrMe.AI is an intelligent chatbot designed to provide supportive and empathetic conversations while maintaining a respectful interaction environment. The chatbot features voice input/output capabilities and includes a built-in aggression detection system to ensure positive user experiences.
+
+##  Features
+
+### Chatbot
+- **Voice Interaction**: Speak to the chatbot using your microphone
+- **Text-to-Speech**: Hear the bot's responses read aloud
+- **Aggression Detection**: Automatically detects and de-escalates aggressive language
+- **Context-Aware Responses**: Maintains conversation context for coherent interactions
+- **Quick Responses**: Instant replies to common greetings and expressions of gratitude
+
+### Website
+- **Responsive Design**: Works seamlessly on desktop and mobile devices
+- **Interactive UI**: Clean and intuitive user interface
+- **Easy Navigation**: Simple navigation between pages
+- **3D Elements**: Engaging visual elements like the butterfly chat button
+
+## Technology Stack
+
+### Frontend
+- **HTML5/CSS3**: Structure and styling
+- **JavaScript (ES6+)**: Interactive features
+- **Web Speech API**: Voice input/output functionality
+- **Responsive Design**: Mobile-first approach
+
+### Backend
+- **Python 3.9+**: Core programming language
+- **FastAPI**: Modern, fast web framework
+- **Uvicorn**: ASGI server
+- **Jinja2**: Template engine
+
+### AI & NLP
+- **Google's Gemini API**: Powers the conversational AI
+- **Custom Aggression Detection**: Handles inappropriate content
+
+### Development Tools
+- **Git**: Version control
+- **GitHub**: Code hosting and collaboration
+- **Python Virtual Environment**: Dependency management
+
+## 📂 Project Structure
+
+
+
 # BettrMe.AI Chatbot – Aggression Detection Flow
 
 ## Short Note: How Aggression Is Detected and Handled
